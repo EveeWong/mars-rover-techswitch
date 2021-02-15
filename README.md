@@ -1,36 +1,55 @@
-# Getting Started with Create React App
+# Techsmiths NASA Mars Website.
+This project was bootstrapped with Create React App.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Staging: https://mars-rover-stg.herokuapp.com/ Production: https://mars-rover-prod.herokuapp.com/
 
-## Available Scripts
+## Introduction.
+This week we are going to be using the open APIs provided by NASA to build a prototype education website about the NASA missions to Mars.
 
-In the project directory, you can run:
+You should be able to sign up for an API Key, browse the APIs available to you and find all the documentation that you need at https://api.nasa.gov/.
 
-### `npm start`
+## Getting started.
+We have a React application created by Create React App. The only difference to last week was that it was created with the --typescript flag, which (unsuprisingly) gets us started in Typescript instead of JavaScript.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I've also editted the raw create react app output so that;
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+We can use SASS
+We have some CircleCi configuration for automatically running our tests.
+We have this README!
+Running the app locally.
+Should be really easy! Just npm install
 
-### `npm test`
+and then npm start to run the server, or npm test to run the tests.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+GitHub permissions
+None of you will have access to the main branch though. This is deliberate - you'll have to merge into this via Pull Requests!
 
-### `npm run build`
+Circle CI.
+Every time you push a commit to GitHub, Circle CI is going to run our tests for us. At some point, you might break some of these tests, and want to figure out what happened!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Create an account with Circle CI now, so that you have access to these logs. https://circleci.com/signup/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+(the permissions should 'JustWork' based on your GitHub permissions, but let me know if that doesn't work)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Heroku
+We are using a service called Heroku to host our apps. Heroku will automatically update our staging app every time we commit to master, and we can deploy to production with the click of a button!
 
-## Learn More
+Right now we only have the free version of Heroku, which won't allow all of us to easily have access to the same workflow, so you'll need to ask me if anything goes wrong / we want to do a deployment.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+(If this becomes a pain, then let me know and we'll just update it).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Making Changes
+I've set up a fairly minimal build pipeline for you to use. It goes like this
+
+you make a new branch for your new feature.
+you add commits to the new branch
+you push those commits to GitHub
+(as early as possible) you raise a Pull Request (PR) for the branch
+I'll take a look at the the PR, and might suggest some improvements.
+Once the PR is approved, it can be merged into master (fixing any merge conflicts if required)
+As soon as it gets merged into master, Heroku will deploy the app to our staging environment.
+You'll then need to get Sign off from your PM (Sasha).
+Once she is happy, we can deploy the change to production.
+Our goal is to be deploying to master as often as possible (ideally lots of times each day), as several small changes tend to be safer and easier to manage than a single huge one.
+
+KEEP YOUR COMMITS AND PULL REQUESTS SMALL. It will make all of this much easier, and help avoid big clashes between different branches of the codebase.
