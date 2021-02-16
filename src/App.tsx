@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import { Home } from './Home/Home';
 import './App.scss';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          <div> Hello World! </div>
+          <Home />
         </Route>
       </Switch>
     </Router>
