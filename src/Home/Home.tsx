@@ -1,4 +1,4 @@
-import { PicOfTheDay } from '../PicOfTheDay/PicOfTheDay';
+import { PicOfTheDay } from './PicOfTheDay/PicOfTheDay';
 
 function Home() {
   return (
