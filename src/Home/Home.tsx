@@ -1,6 +1,11 @@
+import { PicOfTheDay } from '../PicOfTheDay/PicOfTheDay';
+
 function Home() {
   return (
-    <div>home page</div>
+    <div>
+      Home page
+      <PicOfTheDay />
+    </div>
   )
 }
 
