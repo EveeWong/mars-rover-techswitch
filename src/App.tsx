@@ -7,6 +7,7 @@ import {
 import { Home } from './Home/Home';
 import { Curiosity} from './Curiosity/curiosity';
 import './App.scss';
+import {Spirit } from './Spirit/spirit';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route exact path="/rover/curiosity">
           <Curiosity />
+        </Route>
+        <Route exact path="/rover/spirit">
+          <Spirit />
         </Route>
       </Switch>
     </Router>
