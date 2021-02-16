@@ -4,7 +4,7 @@ function PicOfTheDay(props) {
     const [pictureData, setPictureData] = useState(null);
 
     useEffect(() => {
-        fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`)
+        fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(response => response.json())
             .then(data => setPictureData(data));
     }, []);
