@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
       <MobileNavbar />
-      Home page
+      <p>Home page</p>
       <PicOfTheDay />
     </div>
   )
