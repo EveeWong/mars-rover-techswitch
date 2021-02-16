@@ -5,9 +5,9 @@ import {
   Route
 } from 'react-router-dom';
 import { Home } from './Home/Home';
-import { Curiosity} from './Curiosity/curiosity';
+import { Curiosity } from './Curiosity/curiosity';
 import './App.scss';
-import {Spirit } from './Spirit/spirit';
+import { Spirit } from './Spirit/spirit';
 
 function App() {
   return (
@@ -16,10 +16,10 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/rover/curiosity">
+        <Route exact path="/rovers/curiosity">
           <Curiosity />
         </Route>
-        <Route exact path="/rover/spirit">
+        <Route exact path="/rovers/spirit">
           <Spirit />
         </Route>
       </Switch>
