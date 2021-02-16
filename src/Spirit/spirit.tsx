@@ -6,7 +6,7 @@ import './spirit.scss';
 function Spirit() {  
     const [spiritPhotoData, setSpiritPhotoData] = useState(null);
     useEffect(() => {
-        fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?earth_date=2006-10-27&api_key=HX6J0TTAmtm3sivr4NNfbdf1o3GebnOtLXyvGJWB")
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
         .then(response => response.json())
         .then(data => setSpiritPhotoData(data))
     },[]);

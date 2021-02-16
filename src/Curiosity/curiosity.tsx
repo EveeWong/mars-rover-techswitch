@@ -6,10 +6,14 @@ import './curiosity.scss';
 
 function Curiosity() {  
     const [curiosityPhotoData, setCuriosityPhotoData] = useState(null);
+    console.log(process.env.REACT_APP_NASA_API_KEY)
     useEffect(() => {
-        fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2021-2-15&camera=navcam&api_key=HX6J0TTAmtm3sivr4NNfbdf1o3GebnOtLXyvGJWB")
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=0&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
         .then(response => response.json())
-        .then(data => setCuriosityPhotoData(data))
+        .then(data => {
+            setCuriosityPhotoData(data)
+            console.log(data)}
+            )
     },[]);
     
     if (!curiosityPhotoData) {
@@ -25,9 +29,8 @@ function Curiosity() {
             </div>
             <div>Earth date : {curiosityPhotoData.photos[0].earth_date} </div>
             <div>Sol : {curiosityPhotoData.photos[0].sol} </div>
-
         </div>
-  );
+  )
 }
 
 export { Curiosity }
