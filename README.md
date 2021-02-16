@@ -13,13 +13,10 @@ We have a React application created by Create React App. The only difference to 
 
 I've also editted the raw create react app output so that;
 
-We can use SASS
-We have some CircleCi configuration for automatically running our tests.
-We have this README!
-Running the app locally.
-Should be really easy! Just npm install
-
-and then npm start to run the server, or npm test to run the tests.
+- We can use SASS
+- We have some CircleCi configuration for automatically running our tests.
+- We have this README!
+- Running the app locally should be really easy! Just npm install and then npm start to run the server, or npm test to run the tests.
 
 ## GitHub permissions
 You will need to be invited to the repo on github to be able to add branches and submit pull requests so make sure you have received an invite!
