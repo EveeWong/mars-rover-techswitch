@@ -16,7 +16,7 @@ I've also editted the raw create react app output so that;
 - We can use SASS
 - We have some CircleCi configuration for automatically running our tests.
 - We have this README!
-- You need to add a file called ".env" to the root directory, and populate REACT_APP_NASA_API_KEY with your API key (i.e. REACT_APP_NASA_API_KEY=xxxxxxxxxx). Add the .env file to your .gitignore (so that it doesn't get committed).
+- You need to add a file called ".env" to the root directory, and populate REACT_APP_NASA_API_KEY with your API key (i.e. REACT_APP_NASA_API_KEY=xxxxxxxxxx). 
 - Running the app locally should be really easy! Just npm install and then npm start to run the server, or npm test to run the tests.
 
 ## GitHub permissions
