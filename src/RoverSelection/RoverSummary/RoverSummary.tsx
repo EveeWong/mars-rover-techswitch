@@ -1,3 +1,5 @@
+import { transform } from "typescript"
+
 interface RoverSummary {
   rover: {
     name: string,
@@ -24,6 +26,7 @@ function RoverSummary(props: RoverSummary) {
       <img src={props.rover.imagesrc} width='200px' height='200px' alt='Image of Curiosity Rover' />
       <h3> Stats</h3>
       <table className='CuriosityTable'>
+        <tbody>
         <tr>
           <th>Launch Date</th>
           <th>{props.rover.launchdate}</th>
@@ -54,6 +57,7 @@ function RoverSummary(props: RoverSummary) {
           <th> {props.rover.weight} </th>
           <th><img src={props.rover.weightstars} width='80px' alt='star rating'/></th>
         </tr>
+        </tbody>
       </table>
     </div>
   )
