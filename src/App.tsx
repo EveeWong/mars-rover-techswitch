@@ -7,6 +7,7 @@ import {
 import { Home } from './Home/Home';
 import {RoverSelection} from './RoverSelection/RoverSelection'
 import './App.scss';
+import {Footer} from './Home/Footer';
 
 function App() {
   return (
