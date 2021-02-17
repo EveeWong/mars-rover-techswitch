@@ -27,16 +27,7 @@
 
 .mobile_nav a {
     display: block;
-    text-align: center;
-    text-decoration: none;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding: 1em;
-    color: white;
-}
-
-.mobile_nav Link {
-    display: block;
+    font-size: larger;
     text-align: center;
     text-decoration: none;
     padding-top: 1em;
@@ -85,20 +76,18 @@
     filter: blur(3px);
 }
 
-.rover_list a {
-    font-size: small;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 3em;
-    padding-right: 0;
+.rover_list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-.rover_list Link {
+.rover_list a {
     font-size: small;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 3em;
-    padding-right: 0;
+    padding: 0.5em 0;
+    width: 100%;
 }
 
 #rover1 {
@@ -106,5 +95,5 @@
 }
 
 #rover3 {
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
 }
