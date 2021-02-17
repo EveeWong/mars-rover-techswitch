@@ -1,12 +1,13 @@
-import React from 'react'
-
+import { PicOfTheDay } from './PicOfTheDay/PicOfTheDay';
 
 function Home() {
   return (
-    <div>home page
-    <iframe src='https://mars.nasa.gov/layout/embed/image/mslweather/' width='100%' height='600'  scrolling='no' frameborder='0'></iframe>
+    <div>
+      Home page
+      <PicOfTheDay />
+      <iframe src='https://mars.nasa.gov/layout/embed/image/mslweather/' width='100%' height='650'  scrolling='no' frameborder='0'></iframe>
     </div>
-    ) 
+  )
 }
 
 export { Home }
