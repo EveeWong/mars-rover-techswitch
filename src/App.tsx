@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import { Home } from './Home/Home';
 import './App.scss';
+import { Opportunity } from './Opportunity/opportunity';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/rovers/opportunity">
+          <Opportunity />
         </Route>
       </Switch>
     </Router>
