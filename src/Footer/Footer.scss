@@ -5,9 +5,15 @@
     position: fixed;
     width: 100%;
     bottom: 0;
-    transform: translateY(30%);
-    visibility: visible
+    background: #FF9D6F;
+    transform: translateY(50%);
+    visibility: visible;
+    overflow: hidden;
+    border-radius: 7px;
     
+}
+.footerImg{
+    margin-top: -6%;
 }
 
 }
