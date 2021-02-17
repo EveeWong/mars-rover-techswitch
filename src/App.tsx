@@ -22,6 +22,7 @@ function App() {
         </Route>
         <Route exact path="/rovers/spirit">
           <Spirit />
+        </Route>
         <Route exact path="/rovers">
           <RoverSelection />
         </Route>
