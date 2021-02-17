@@ -10,10 +10,7 @@ function Curiosity() {
     useEffect(() => {
         fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=0&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
         .then(response => response.json())
-        .then(data => {
-            setCuriosityPhotoData(data)
-            console.log(data)}
-            )
+        .then(data => setCuriosityPhotoData(data))
     },[]);
     
     if (!curiosityPhotoData) {
