@@ -4,9 +4,11 @@ import './MobileNavbar.scss';
 function MobileNavbar() {
     return (
         <div className="mobile_nav_container" id="mobile_nav_container">
-            <button type="button" className="mobile_nav_toggle" id="mobile_nav_toggle" onClick={toggleMobileNav}>
-                X
-            </button>
+            <div className="mobile_nav_toggle" id="mobile_nav_toggle" onClick={() => { toggleMobileNav(); animateMenuIcon() }}>
+                <div className="bar1"></div>
+                <div className="bar2"></div>
+                <div className="bar3"></div>
+            </div>
 
             <nav className="mobile_nav" id="mobile_nav">
                 <ul>
@@ -29,6 +31,11 @@ function toggleMobileNav() {
     for (let i = 0; i < bgElements.length; i++) {
         bgElements[i].classList.toggle("blurred_bg");
     }
+}
+
+function animateMenuIcon() {
+    var button = document.getElementById("mobile_nav_toggle");
+    button.classList.toggle("change");
 }
 
 export { MobileNavbar };
