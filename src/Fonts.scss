@@ -1,0 +1,46 @@
+//h1 will be nasa font
+// open sans for header 2, 3
+//roboto for p
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.opensans {
+  font-family: "Open Sans", sans-serif;
+}
+
+@import url('http://fonts.cdnfonts.com/css/bambi');
+
+.bambi{
+    font-family:'Bambi Bold', sans-serif;
+}
+
+@import url('https://typodermicfonts.com/nasalization/');
+
+.nasafont{
+    font-family:''
+}
+
+h1{
+  font-family: 'Bambi Bold';
+  // font-family: nasalization, sans-serif;
+  // font-style: normal;
+  // font-weight: 400;
+}
+h2{
+  font-family: 'Open Sans';
+}
+
+h3{font-family: 'Open Sans';
+
+}
+h4{font-family: 'Open Sans';
+
+}
+h5{
+  font-family: 'Open Sans';
+}
+p{ 
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+}
