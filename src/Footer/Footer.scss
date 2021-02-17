@@ -1,0 +1,19 @@
+
+@media only screen and (max-width: 600px) {
+
+.footerMobile{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(30%);
+    visibility: visible
+    
+}
+
+}
+
+@media only screen and (min-width: 601px) {
+    .footerMobile{
+        visibility: hidden
+    }
+}

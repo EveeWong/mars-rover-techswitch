@@ -7,7 +7,8 @@ import {
 import { Home } from './Home/Home';
 import {RoverSelection} from './RoverSelection/RoverSelection'
 import './App.scss';
-import {Footer} from './Home/Footer';
+import {Footer} from './Footer/Footer';
+
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <RoverSelection />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

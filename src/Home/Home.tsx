@@ -1,5 +1,5 @@
 import { PicOfTheDay } from './PicOfTheDay/PicOfTheDay';
-import { Weather } from './Weather/Weather';
+import { Weather } from './Weather/weather';
 
 function Home() {
   return (
