@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import { Home } from './Home/Home';
 import { Curiosity } from './Curiosity/curiosity';
+import { RoverSelection } from './RoverSelection/RoverSelection';
 import './App.scss';
 import { Spirit } from './Spirit/spirit';
 
@@ -21,6 +22,8 @@ function App() {
         </Route>
         <Route exact path="/rovers/spirit">
           <Spirit />
+        <Route exact path="/rovers">
+          <RoverSelection />
         </Route>
       </Switch>
     </Router>
