@@ -1,6 +1,7 @@
 
 import '../Fonts.scss'; 
 import { PicOfTheDay } from './PicOfTheDay/PicOfTheDay';
+import { Weather } from './Weather/Weather';
 
 function Home() {
   return (
@@ -11,8 +12,10 @@ function Home() {
           <h4>h4 home page</h4>
           <h5>h5 home page</h5>
           <p>p paragraph</p>
-    Home page
-    <PicOfTheDay />
+
+      Home page
+      <PicOfTheDay />
+      <Weather />
 
     </div>
   )
