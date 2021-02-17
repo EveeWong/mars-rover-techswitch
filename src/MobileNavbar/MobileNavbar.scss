@@ -35,6 +35,16 @@
     color: white;
 }
 
+.mobile_nav Link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding: 1em;
+    color: white;
+}
+
 .mobile_nav_toggle {
     display: inline-block;
     position: absolute;
@@ -76,6 +86,14 @@
 }
 
 .rover_list a {
+    font-size: small;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 3em;
+    padding-right: 0;
+}
+
+.rover_list Link {
     font-size: small;
     padding-top: 0.5em;
     padding-bottom: 0.5em;

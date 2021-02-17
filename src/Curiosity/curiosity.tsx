@@ -1,8 +1,7 @@
-
-
 import React from 'react';
 import { useState, useEffect } from "react";
 import './curiosity.scss';
+import { MobileNavbar } from "../MobileNavbar/MobileNavbar";
 
 function Curiosity() {
     const [curiosityPhotoData, setCuriosityPhotoData] = useState(null);
@@ -14,10 +13,13 @@ function Curiosity() {
     }, []);
 
     if (!curiosityPhotoData) {
-        return <div>Waiting for data!</div>
+        return <div>
+             <MobileNavbar />
+            Waiting for data!</div>
     }
     return (
         <div>
+            <MobileNavbar />
             <div>Rover : {curiosityPhotoData.photos[0].rover.name} </div>
             <div>Camera : {curiosityPhotoData.photos[0].camera.full_name} </div>
             <div>
