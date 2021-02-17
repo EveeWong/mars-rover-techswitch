@@ -1,30 +1,41 @@
-
-
 import React from 'react';
 import { useState, useEffect } from "react";
-import './curiosity.scss';
+import '../RoverPhoto/RoverPhoto.scss'
+import { RoverTopPhoto } from '../RoverPhoto/RoverTopPhoto';
 
 function Curiosity() {
+    let curiosityPhoto = [];
     const [curiosityPhotoData, setCuriosityPhotoData] = useState(null);
-    console.log(process.env.REACT_APP_NASA_API_KEY)
+    const [clickedImage, setClickedImage] = useState(null);
     useEffect(() => {
-        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=0&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=2&camera=navcam&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(response => response.json())
-            .then(data => setCuriosityPhotoData(data))
+            .then(data => {
+                setCuriosityPhotoData(data)
+                setClickedImage(data.photos[0])
+            }
+            )
     }, []);
 
-    if (!curiosityPhotoData) {
+    if (!curiosityPhotoData || !clickedImage) {
         return <div>Waiting for data!</div>
     }
+
+    for (let i = 0; i < 6 && i < curiosityPhotoData.photos.length; i++) {
+        curiosityPhoto.push(curiosityPhotoData.photos[i])
+    }
+
     return (
-        <div>
-            <div>Rover : {curiosityPhotoData.photos[0].rover.name} </div>
-            <div>Camera : {curiosityPhotoData.photos[0].camera.full_name} </div>
+        <div >
             <div>
-                <img className="img-curiosity-main" src={curiosityPhotoData.photos[0].img_src} />
+                <RoverTopPhoto photoArray={clickedImage} />
             </div>
-            <div>Earth date : {curiosityPhotoData.photos[0].earth_date} </div>
-            <div>Sol : {curiosityPhotoData.photos[0].sol} </div>
+            <div className="img-rover-restofimages">
+                <div>
+                    {curiosityPhoto.map(photo => <img className="img-rover-photo-list" src={photo.img_src}
+                        onClick={() => setClickedImage(photo)} />)}
+                </div>
+            </div>
         </div>
     )
 }

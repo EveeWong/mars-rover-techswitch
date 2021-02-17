@@ -1,0 +1,28 @@
+.topDiv{
+    padding: 10px 20px;   
+}
+
+.img-rover-top{
+  
+    width: 250px;
+    height: 250px;
+    padding: 10px 0px;
+    
+}
+
+.img-rover-photo-list {
+    height: 100px;
+    width: 100px;
+    padding: 5px 11px;
+}
+
+.img-rover-restofimages
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.rover-allimagesData{
+padding: 10px 58px;
+}
