@@ -5,25 +5,36 @@ import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
 
 function Curiosity() {
     const [curiosityPhotoData, setCuriosityPhotoData] = useState(null);
+    const [searchDate, setSearchDate] = useState("2012-08-08");
+    const [submitDate, setSubmitDate] = useState("2012-08-08");
     useEffect(() => {
-        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=2&camera=navcam&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?&earth_date=${submitDate}&camera=navcam&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(response => response.json())
             .then(data => {
+                // deal with the case that there is no data
                 setCuriosityPhotoData(data)
-            }
-            )
-    }, []);
+            })
+    }, [submitDate]);
+
+    function searchForNewDate() {
+        setSubmitDate(searchDate)
+    }
 
     if (!curiosityPhotoData) {
         return <div>Waiting for data!</div>
     }
+    // verify some data exists or return a page that says no data for this date
     let curiosityPhoto = curiosityPhotoData.photos.slice(0, 6);
     return (
         <div>
+            <label>
+                Date
+                <input type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
+                <button onClick={() => searchForNewDate()}>Search</button> 
+            </label>
             <RoverPhoto photoData={curiosityPhoto} />
         </div>
     )
 }
 
 export { Curiosity }
-

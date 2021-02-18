@@ -1,10 +1,15 @@
 import React from 'react';
 import './RoverPhoto.scss';
 import { RoverTopPhoto } from '../RoverPhoto/RoverTopPhoto';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function RoverPhoto(props) {
     const [clickedImage, setClickedImage] = useState(props.photoData[0]);
+
+    useEffect(() => {
+        setClickedImage(props.photoData[0])
+    }, [props])
+
     return (
         <div >
             <div>
