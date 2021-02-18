@@ -67,7 +67,10 @@ table, th, td {
     border-collapse:collapse;
     border: 2px solid $highlightcolor;
 }
-.pagebreak{
+.bottompagebreak{
     padding-bottom: 95px;
+}
+.toppagebreak{
+    padding-top: 50px;
 }
 a{font-size: medium;}

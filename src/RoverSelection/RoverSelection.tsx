@@ -18,6 +18,7 @@ function RoverSelection() {
     <div className='RoverSelection'>
       <MobileNavbar />
       <h1> Rovers </h1>
+      <div className='toppagebreak'></div>
       <div className='imageicons'>  
         <img data-testid={"CuriosityButton"} className={selectedRover === Rovers.Curiosity ? 'selected-icon' : 'unselected-icon'} src={roverData.curiosity.imagesrc} alt='Curiosity Icon' width='100px' height='100px' onClick={() => setSelectedRover(Rovers.Curiosity)}/>
         <img data-testid={"OpportunityButton"} className={selectedRover === Rovers.Opportunity ? 'selected-icon' : 'unselected-icon'} src={roverData.opportunity.imagesrc} alt='Opportunity Icon' width='100px' height='100px' onClick={() => setSelectedRover(Rovers.Opportunity)}/>
@@ -35,7 +36,7 @@ function RoverSelection() {
         <RoverSummary rover={roverData.spirit}/>
         <Link to='/rovers/spirit' className='Link'> Explore Spirit Rover! </Link>
       </div>
-      <div className='pagebreak'></div>
+      <div className='bottompagebreak'></div>
     </div>
   )
 }
