@@ -10,10 +10,12 @@ import { RoverSelection } from './RoverSelection/RoverSelection';
 import './App.scss';
 import { Spirit } from './Spirit/spirit';
 import {Footer} from './Footer/Footer';
+import { Header } from './Header/Header';
 
 function App() {
   return (
     <Router>
+    <Header />
       <Switch>
         <Route exact path="/">
           <Home />
