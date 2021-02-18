@@ -1,22 +1,44 @@
 @import "../Colours.scss";
 @import "../Fonts.scss";
+.RoverSelection{
+    background-color: $darkbackgroundcolor;
 
+}
+@mixin roverstyle { 
+    font-size: x-small;
+    text-align: center;
+
+}
 
 .CuriosityRover{
-    font-size: x-small;
-    background-color: $lightbackgroundcolor;
+    @include roverstyle;  
+    
+}
+.OpportunityRover{
+    @include roverstyle;   
+
+}
+.SpiritRover{
+    @include roverstyle;   
+    
 }
 
 .roverImage{
-    border: 3px white solid;
+    border: 4px black;
+    background-color:$lightbackgroundcolor;
+    border-style:double;
     border-radius: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 200px;
+    height: 200px;
 }
 .roverTable{
-    background-color:$darkbackgroundcolor;
+    background-color:$lightbackgroundcolor;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
 
 }
 
@@ -26,4 +48,7 @@ tr:nth-child(even){
 table, th, td {
     border-collapse:collapse;
     border: 2px solid $highlightcolor;
+}
+.pagebreak{
+    padding-bottom: 95px;
 }
