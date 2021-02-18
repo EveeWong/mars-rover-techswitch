@@ -3,18 +3,25 @@
 
 
 .RoverSelection{
-    background-color: $darkbackgroundcolor;
+    background-color: $lightbackgroundcolor;
+    text-align: center;
 
 }
 @mixin roverstyle { 
-    font-size: x-small;
+    width: 90%;
+    margin:auto;
     text-align: center;
+    background-color:$darkbackgroundcolor;
+    border-radius: 25px;
+    margin-top: 3px;
+    padding: 3px;
+    padding-bottom: 15px;
 
 }
 @mixin iconstyle{
     
     border: 4px black;
-    background-color:$lightbackgroundcolor;
+    background-color:$selectedbordercolor;
     border-style:double;
     border-radius: 50%;
     
@@ -23,10 +30,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-bottom: 18px;
 }
 .selected-icon {
     @include iconstyle;
-    background-color: rgb(202, 54, 0);
+    background-color: $lighttextcolor;
     
 }
 .unselected-icon{
@@ -43,7 +51,7 @@
 
 .roverImage{
     border: 4px black;
-    background-color:$lightbackgroundcolor;
+    background-color:$lighttextcolor;
     border-style:double;
     border-radius: 50%;
     display: block;
@@ -53,24 +61,41 @@
     height: 200px;
 }
 .roverTable{
-    background-color:$lightbackgroundcolor;
+    background-color: $darkbackgroundcolor;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+    color: white;
+    font-size: x-small;
 
 }
 
 tr:nth-child(even){
-    background-color: $bordercolor;
+    background-color: $highlightcolor;
 }
 table, th, td {
     border-collapse:collapse;
-    border: 2px solid $highlightcolor;
+    border: 2px solid $bordercolor;
 }
 .bottompagebreak{
     padding-bottom: 95px;
 }
 .toppagebreak{
-    padding-top: 50px;
+    padding-top: 80px;
 }
-a{font-size: medium;}
+a{font-size: large;
+    color:$lighttextcolor;
+    text-shadow: 2px 2px 2px #2e2b2ee7;
+  }
+
+h2{font-family: 'Bambi Bold', sans-serif;
+text-shadow: 2px 2px 2px #2e2b2ee7;
+color:$lighttextcolor;
+padding-top: 2px;
+}
+
+h3{font-family: 'Bambi Bold', sans-serif;
+    text-shadow: 2px 2px 2px #2e2b2ee7;
+    padding-bottom: 2px;
+    color:$lighttextcolor;
+    }
