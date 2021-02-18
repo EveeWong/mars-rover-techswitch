@@ -1,14 +1,18 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-import './curiosity.scss';
+import '../RoverPhoto/RoverPhoto.scss'
+import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
 import { MobileNavbar } from "../MobileNavbar/MobileNavbar";
 
 function Curiosity() {
     const [curiosityPhotoData, setCuriosityPhotoData] = useState(null);
     useEffect(() => {
-        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=0&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=2&camera=navcam&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(response => response.json())
-            .then(data => setCuriosityPhotoData(data))
+            .then(data => {
+                setCuriosityPhotoData(data)
+            }
+            )
     }, []);
 
     if (!curiosityPhotoData) {
@@ -19,18 +23,14 @@ function Curiosity() {
             </div>
         )
     }
+    let curiosityPhoto = curiosityPhotoData.photos.slice(0, 6);
     return (
         <div>
+            <RoverPhoto photoData={curiosityPhoto} />
             <MobileNavbar />
-            <div>Rover : {curiosityPhotoData.photos[0].rover.name} </div>
-            <div>Camera : {curiosityPhotoData.photos[0].camera.full_name} </div>
-            <div>
-                <img className="img-curiosity-main" src={curiosityPhotoData.photos[0].img_src} />
-            </div>
-            <div>Earth date : {curiosityPhotoData.photos[0].earth_date} </div>
-            <div>Sol : {curiosityPhotoData.photos[0].sol} </div>
-        </div>
+         </div>
     )
 }
 
 export { Curiosity }
+

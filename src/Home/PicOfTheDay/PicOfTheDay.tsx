@@ -15,22 +15,22 @@ function PicOfTheDay() {
 
     if (pictureData.media_type == "video") {
         return (
-            <div>
-                <h1>Nasa`&apos;`s feature of the day!</h1>
-                <h2>{pictureData.title}</h2>
-                <iframe width="320" height="240"
+            <div className='postOTDContainer'>
+                <h2 className='featureTitle'>Nasa&apos;s feature of the day!</h2>
+                <p className='postTitle'>{pictureData.title}</p>
+                <iframe className='postOTD' width="320" height="240"
                     src={pictureData.url} >
                 </iframe>
-                {pictureData.explanation}
+                <p className='explainOTD'>{pictureData.explanation}</p>
             </div>
         )
     } else if (pictureData.media_type == "image") {
         return (
-            <div>
-                <h1>Nasa`&apos;`s feature of the day!</h1>
-                <h2>{pictureData.title}</h2>
-                <img src={pictureData.url} width="320" />
-                {pictureData.explanation}
+            <div className='postOTDContainer'>
+                <h2 className='featureTitle'>Nasa$&apos;s feature of the day!</h2>
+                <p className='postTitle'>{pictureData.title}</p>
+                <img className='postOTD' src={pictureData.url} width="320" />
+                <p className='explainOTD'>{pictureData.explanation}</p>
             </div>
         )
     }
