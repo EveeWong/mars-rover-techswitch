@@ -6,7 +6,6 @@ import './opportunity.scss';
 
 function Opportunity() {
     const [opportunityPhotoData, setOpportunityPhotoData] = useState(null);
-    console.log(process.env.REACT_APP_NASA_API_KEY)
     useEffect(() => {
         fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(response => response.json())
