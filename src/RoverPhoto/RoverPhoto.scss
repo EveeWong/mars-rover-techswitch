@@ -1,0 +1,12 @@
+.img-rover-photo-list{
+    height: 100px;
+    width: 100px;
+    padding: 5px 11px;
+}
+
+.img-rover-restofimages{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
