@@ -1,7 +1,7 @@
 import React from 'react';
 import { MobileNavbar } from './MobileNavbar';
 import { BrowserRouter } from 'react-router-dom';
-import { fireEvent, render, waitFor } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 
 test('renders the MobileNavbar component without errors', () => {
   render(
