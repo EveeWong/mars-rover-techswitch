@@ -1,5 +1,7 @@
+@import 'Colours';
+
 body{
-    background-color: #FF9D6F;
+    background-color: $lightbackgroundcolor;
 }
 h1{
     position: fixed;
@@ -7,7 +9,7 @@ h1{
     top: 0;
     margin-top: 0;
     transform: translateX(-50%);
-    color: #DCDCDC;
+    color: $lighttextcolor;
     z-index: 1000;
 
 }
