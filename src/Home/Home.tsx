@@ -1,4 +1,3 @@
-
 import '../Fonts.scss'; 
 import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
 import { PicOfTheDay } from './PicOfTheDay/PicOfTheDay';
