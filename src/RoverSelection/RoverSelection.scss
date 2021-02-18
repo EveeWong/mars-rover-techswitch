@@ -1,5 +1,7 @@
 @import "../Colours.scss";
 @import "../Fonts.scss";
+
+
 .RoverSelection{
     background-color: $darkbackgroundcolor;
 
@@ -9,18 +11,34 @@
     text-align: center;
 
 }
-
-.CuriosityRover{
-    @include roverstyle;  
+@mixin iconstyle{
+    
+    border: 4px black;
+    background-color:$lightbackgroundcolor;
+    border-style:double;
+    border-radius: 50%;
     
 }
-.OpportunityRover{
-    @include roverstyle;   
-
+.imageicons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
-.SpiritRover{
-    @include roverstyle;   
+.selected-icon {
+    @include iconstyle;
+    background-color: rgb(202, 54, 0);
     
+}
+.unselected-icon{
+    @include iconstyle;
+}
+
+.selected-pic {
+    @include roverstyle;
+}
+
+.un-selectedpic {
+    display: none;
 }
 
 .roverImage{
@@ -52,3 +70,4 @@ table, th, td {
 .pagebreak{
     padding-bottom: 95px;
 }
+a{font-size: medium;}

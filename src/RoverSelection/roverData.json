@@ -1,7 +1,7 @@
 { 
   "curiosity": {
     "name": "Curiosity",
-    "imagesrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Curiosity_Self-Portrait_at_%27Big_Sky%27_Drilling_Site.jpg/520px-Curiosity_Self-Portrait_at_%27Big_Sky%27_Drilling_Site.jpg",
+    "imagesrc": "https://s3.amazonaws.com/www-inside-design/uploads/2018/09/mars-rover-square-810x810.jpg",
     "launchdate":"26/11/2011",
     "speed": "0.09 mph",
     "speedstars": "https://codeahoy.com/assets/images/compare/ratings/2_stars.png",
