@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import '../RoverPhoto/RoverPhoto.scss'
 import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
-import './curiosity.scss';
 import { MobileNavbar } from "../MobileNavbar/MobileNavbar";
 
 function Curiosity() {
