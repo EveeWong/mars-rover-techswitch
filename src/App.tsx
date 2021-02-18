@@ -8,6 +8,7 @@ import { Home } from './Home/Home';
 import { Curiosity } from './Curiosity/curiosity';
 import { RoverSelection } from './RoverSelection/RoverSelection';
 import './App.scss';
+import { Opportunity } from './Opportunity/opportunity';
 import { Spirit } from './Spirit/spirit';
 import {Footer} from './Footer/Footer';
 import { Header } from './Header/Header';
@@ -19,6 +20,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/rovers/opportunity">
+          <Opportunity />
         </Route>
         <Route exact path="/rovers/curiosity">
           <Curiosity />
