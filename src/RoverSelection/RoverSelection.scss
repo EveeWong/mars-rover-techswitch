@@ -1,0 +1,29 @@
+@import "../Colours.scss";
+@import "../Fonts.scss";
+
+
+.CuriosityRover{
+    font-size: x-small;
+    background-color: $lightbackgroundcolor;
+}
+
+.roverImage{
+    border: 3px white solid;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.roverTable{
+    background-color:$darkbackgroundcolor;
+
+}
+
+tr:nth-child(even){
+    background-color: $bordercolor;
+}
+table, th, td {
+    border-collapse:collapse;
+    border: 2px solid $highlightcolor;
+}

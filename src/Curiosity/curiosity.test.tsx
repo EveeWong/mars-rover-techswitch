@@ -1,12 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Home } from './Home';
+import { Curiosity } from './curiosity';
 import { BrowserRouter } from 'react-router-dom';
 
-test('renders the Home component without errors', () => {
+test('renders the curiosity component without errors', () => {
   render(
     <BrowserRouter>
-      <Home />
+      <Curiosity />
     </BrowserRouter>
   );
 });
