@@ -23,7 +23,7 @@ function Curiosity() {
             </div>
         )
     }
-    let curiosityPhoto = curiosityPhotoData.photos.slice(0, 6);
+    const curiosityPhoto = curiosityPhotoData.photos.slice(0, 6);
     return (
         <div>
             <RoverPhoto photoData={curiosityPhoto} />
