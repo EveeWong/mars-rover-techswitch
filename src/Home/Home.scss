@@ -1,4 +1,5 @@
 
+
 .postOTDContainer{
     font-family: "Segoe UI";
     color: #DCDCDC;
@@ -41,6 +42,22 @@
 .featureTitle{
     margin-left: 7.5%;
     text-shadow: 2px 2px 2px #2e2b2ee7;
+}
+.roverButton{
+    z-index:1001;
+    position: fixed;
+    right: 2.5%;
+    bottom: 2px;
+    width: 13%;
+}
+.clickRover{
+    position: fixed;
+    bottom: 2px;
+    margin-bottom: 1.5%;
+    right: 17%;
+    font-family: "Segoe UI";
+    color: #DCDCDC;
+    z-index: 1002;
 }
 
 @media only screen and (max-width: 600px){
