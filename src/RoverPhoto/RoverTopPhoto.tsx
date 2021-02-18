@@ -1,20 +1,24 @@
-
 import React from 'react';
-import { useState, useEffect } from "react";
-import './RoverPhoto.scss';
+import './RoverTopPhoto.scss';
 
-function RoverTopPhoto(props) {
+interface RoverPhoto {
+    img_src: string;
+    full_name: string;
+    earth_date: string;
+    sol: string
+}
+
+function RoverTopPhoto(props: RoverPhoto) {
     return (
         <div >
-            <div className="rover-allimagesData">
-                <img className="img-rover-top" src={props.photoArray.img_src} />
-                <div>Camera : {props.photoArray.camera.full_name} </div>
-            <div>Earth date : {props.photoArray.earth_date} </div>
-            <div>Sol : {props.photoArray.sol} </div>
+            <div className="top-rover-div">
+                <img className="img-rover-top" src={props.img_src} />
+                <div>Camera : {props.full_name} </div>
+                <div>Earth date : {props.earth_date} </div>
+                <div>Sol : {props.sol} </div>
             </div>
-            
-        </div> 
+        </div>
     )
 }
-        
+
 export { RoverTopPhoto }
