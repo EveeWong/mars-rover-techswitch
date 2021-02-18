@@ -23,9 +23,9 @@ function RoverSummary(props: RoverSummary) {
   return (
     <div>
       <h2> {props.rover.name} Rover:</h2>
-      <img src={props.rover.imagesrc} width='200px' height='200px' alt='Image of Curiosity Rover' />
+      <img className='roverImage' src={props.rover.imagesrc} width='200px' height='200px' alt='Image of Rover' />
       <h3> Stats</h3>
-      <table className='CuriosityTable'>
+      <table className='roverTable'>
         <tbody>
         <tr>
           <th>Launch Date</th>

@@ -1,3 +1,4 @@
+import './RoverSelection.scss'
 import { RoverSummary } from "./RoverSummary/RoverSummary";
 import roverData from "./roverData.json";
 import { Link } from 'react-router-dom';
