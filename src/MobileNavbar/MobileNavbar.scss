@@ -1,3 +1,5 @@
+@import '../Colours';
+
 .mobile_nav {
     width: 45%;
     height: 100%;
@@ -6,7 +8,7 @@
     right: 0;
     top: 0; 
     margin: 0;
-    background-color: #E27B58;
+    background-color: $navbarbackgroundcolor;
     padding: 0;
     padding-top: 3em;
     display: none;
