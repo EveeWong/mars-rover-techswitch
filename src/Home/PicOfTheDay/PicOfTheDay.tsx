@@ -21,7 +21,7 @@ function PicOfTheDay() {
                 <iframe width="320" height="240"
                     src={pictureData.url} >
                 </iframe>
-                {pictureData.explanation}
+                <p>{pictureData.explanation}</p>
             </div>
         )
     } else if (pictureData.media_type == "image") {
@@ -30,7 +30,7 @@ function PicOfTheDay() {
                 <h1>Nasa&apos;s feature of the day!</h1>
                 <h2>{pictureData.title}</h2>
                 <img src={pictureData.url} width="320" />
-                {pictureData.explanation}
+                <p>{pictureData.explanation}</p>
             </div>
         )
     }
