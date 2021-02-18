@@ -17,7 +17,7 @@ function useMenuVisible(initialIsVisible) {
     }, []);
 
     useEffect(() => {
-        var bgElements = document.querySelectorAll('#mobile_nav_container ~ *');
+        const bgElements = document.querySelectorAll('#mobile_nav_container ~ *');
         if (isMenuVisible) {
             for (let i = 0; i < bgElements.length; i++) {
                 bgElements[i].classList.add("blurred_bg");
