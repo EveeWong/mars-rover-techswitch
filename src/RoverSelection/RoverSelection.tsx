@@ -1,6 +1,11 @@
+import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
+
 function RoverSelection() {
-    return (
-      <div>Rover selection page</div>
+    return (      
+      <div>
+        <MobileNavbar />
+        <p>Rover selection page</p>
+      </div>
     )
   }
   

@@ -1,9 +1,11 @@
+import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
 import { PicOfTheDay } from './PicOfTheDay/PicOfTheDay';
 
 function Home() {
   return (
     <div>
-      Home page
+      <MobileNavbar />
+      <p>Home page</p>
       <PicOfTheDay />
     </div>
   )
