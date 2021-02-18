@@ -16,7 +16,7 @@ function PicOfTheDay() {
     if (pictureData.media_type == "video") {
         return (
             <div>
-                <h1>Nasa`&apos;`s feature of the day!</h1>
+                <h1>Nasa&apos;s feature of the day!</h1>
                 <h2>{pictureData.title}</h2>
                 <iframe width="320" height="240"
                     src={pictureData.url} >
@@ -27,7 +27,7 @@ function PicOfTheDay() {
     } else if (pictureData.media_type == "image") {
         return (
             <div>
-                <h1>Nasa`&apos;`s feature of the day!</h1>
+                <h1>Nasa&apos;s feature of the day!</h1>
                 <h2>{pictureData.title}</h2>
                 <img src={pictureData.url} width="320" />
                 {pictureData.explanation}
