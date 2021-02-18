@@ -5,7 +5,6 @@ import { MobileNavbar } from "../MobileNavbar/MobileNavbar";
 
 function Curiosity() {
     const [curiosityPhotoData, setCuriosityPhotoData] = useState(null);
-    console.log(process.env.REACT_APP_NASA_API_KEY)
     useEffect(() => {
         fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=0&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(response => response.json())
@@ -13,9 +12,12 @@ function Curiosity() {
     }, []);
 
     if (!curiosityPhotoData) {
-        return <div>
-             <MobileNavbar />
-            Waiting for data!</div>
+        return (
+            <div>
+                <MobileNavbar />
+                Waiting for data!
+            </div>
+        )
     }
     return (
         <div>
