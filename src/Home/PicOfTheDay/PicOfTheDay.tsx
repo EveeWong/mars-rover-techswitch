@@ -16,8 +16,8 @@ function PicOfTheDay(props) {
     if (pictureData.media_type == "video") {
         return (
             <div className='postOTDContainer'>
-                <h2>Nasa's feature of the day!</h2>
-                <h2>{pictureData.title}</h2>
+                <h2 className='featureTitle'>Nasa's feature of the day!</h2>
+                <p className='postTitle'>{pictureData.title}</p>
                 <iframe className='postOTD' width="320" height="240"
                     src={pictureData.url} >
                 </iframe>
@@ -27,8 +27,8 @@ function PicOfTheDay(props) {
     } else if (pictureData.media_type == "image") {
         return (
             <div className='postOTDContainer'>
-                <h2>Nasa's feature of the day!</h2>
-                <h2>{pictureData.title}</h2>
+                <h2 className='featureTitle'>Nasa's feature of the day!</h2>
+                <p className='postTitle'>{pictureData.title}</p>
                 <img className='postOTD' src={pictureData.url} width="320" />
                 <p className='explainOTD'>{pictureData.explanation}</p>
             </div>
