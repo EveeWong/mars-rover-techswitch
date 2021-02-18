@@ -4,7 +4,9 @@ import { RoverSelection } from './RoverSelection';
 import { BrowserRouter } from 'react-router-dom';
 
 test('renders the RoverSelection component without errors', () => {
- render( <BrowserRouter>
-    <RoverSelection/>
-  </BrowserRouter>)
+  render(
+    <BrowserRouter>
+      <RoverSelection/>
+    </BrowserRouter>    
+  );
 });

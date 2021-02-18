@@ -2,11 +2,13 @@ import './RoverSelection.scss'
 import { RoverSummary } from "./RoverSummary/RoverSummary";
 import roverData from "./roverData.json";
 import { Link } from 'react-router-dom';
+import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
 
 function RoverSelection() {
 
   return (
     <div>
+      <MobileNavbar />
       <h1> Rover selection page </h1>
       <div className='CuriosityRover'>
         <RoverSummary rover={roverData.curiosity} />
@@ -25,3 +27,4 @@ function RoverSelection() {
 }
 
 export { RoverSelection }
+
