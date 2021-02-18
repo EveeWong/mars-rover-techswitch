@@ -11,7 +11,6 @@ function Home() {
       <p>Home page</p>
       <PicOfTheDay />
       <Weather />
-
     </div>
   )
 }
