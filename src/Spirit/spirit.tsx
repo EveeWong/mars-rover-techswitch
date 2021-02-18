@@ -1,31 +1,52 @@
-
 import React from 'react';
 import { useState, useEffect } from "react";
-import './spirit.scss';
+import '../RoverPhoto/RoverPhoto.scss'
+import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
 
 function Spirit() {
     const [spiritPhotoData, setSpiritPhotoData] = useState(null);
+    const [searchDate, setSearchDate] = useState("2004-01-05");
+    const [submitDate, setSubmitDate] = useState("2004-01-05");
     useEffect(() => {
-        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?&earth_date=${submitDate}&camera=navcam&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(response => response.json())
-            .then(data => setSpiritPhotoData(data))
-    }, []);
+            .then(data => {
+                setSpiritPhotoData(data)
+            })
+    }, [submitDate]);
+
+    function searchForNewDate() {
+        setSubmitDate(searchDate)
+    }
 
     if (!spiritPhotoData) {
         return <div>Waiting for data!</div>
     }
+
+    let spiritPhoto = spiritPhotoData.photos.slice(0, 6);
+    let photoAvailableBoolean = false;
+    let displayDataJsx;
+    if (spiritPhoto.length > 0) {
+        photoAvailableBoolean = true;
+    }
+
+    if (photoAvailableBoolean == true) {
+        displayDataJsx = <RoverPhoto photoData={spiritPhoto} />
+    } else {
+        displayDataJsx = <div>No photos available for this date. Please choose a different date. Spirit rover has been on Mars from 2004-01-05 till 2010-03-22. Some dates may not have images</div>
+    }
+
     return (
         <div>
-            <div>Rover : {spiritPhotoData.photos[0].rover.name} </div>
-            <div>Camera : {spiritPhotoData.photos[0].camera.full_name} </div>
-            <div>
-                <img className="img-spirit-main" src={spiritPhotoData.photos[0].img_src} />
-            </div>
-            <div>Earth date : {spiritPhotoData.photos[0].earth_date} </div>
-            <div>Sol : {spiritPhotoData.photos[0].sol} </div>
-
+            <h1>Spirit Rover</h1>
+            <label className="rover-date-top-padding">
+                Date
+                <input className="rover-input-date" type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
+                <button className="rover-input-date" onClick={() => searchForNewDate()}>Search</button>
+            </label>
+            {displayDataJsx}
         </div>
-    );
+    )
 }
 
 export { Spirit }

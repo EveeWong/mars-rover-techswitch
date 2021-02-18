@@ -9,6 +9,7 @@ import { Curiosity } from './Curiosity/curiosity';
 import { RoverSelection } from './RoverSelection/RoverSelection';
 import './App.scss';
 import { Spirit } from './Spirit/spirit';
+import { Opportunity } from './Opportunity/opportunity';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route exact path="/rovers/spirit">
           <Spirit />
+        </Route>
+        <Route exact path="/rovers/opportunity">
+          <Opportunity />
         </Route>
         <Route exact path="/rovers">
           <RoverSelection />

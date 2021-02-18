@@ -3,15 +3,15 @@ import { useState, useEffect } from "react";
 import '../RoverPhoto/RoverPhoto.scss'
 import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
 
-function Curiosity() {
-    const [curiosityPhotoData, setCuriosityPhotoData] = useState(null);
-    const [searchDate, setSearchDate] = useState("2012-08-08");
-    const [submitDate, setSubmitDate] = useState("2012-08-08");
+function Opportunity() {
+    const [opportunityPhotoData, setOpportunityPhotoData] = useState(null);
+    const [searchDate, setSearchDate] = useState("2004-01-26");
+    const [submitDate, setSubmitDate] = useState("2004-01-26");
     useEffect(() => {
-        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?&earth_date=${submitDate}&camera=navcam&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?&earth_date=${submitDate}&camera=navcam&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(response => response.json())
             .then(data => {
-                setCuriosityPhotoData(data)
+                setOpportunityPhotoData(data)
             })
     }, [submitDate]);
 
@@ -19,26 +19,26 @@ function Curiosity() {
         setSubmitDate(searchDate)
     }
 
-    if (!curiosityPhotoData) {
+    if (!opportunityPhotoData) {
         return <div>Waiting for data!</div>
     }
 
-    let curiosityPhoto = curiosityPhotoData.photos.slice(0, 6);
+    let opportunityPhoto = opportunityPhotoData.photos.slice(0, 6);
     let photoAvailableBoolean = false;
     let displayDataJsx;
-    if (curiosityPhoto.length > 0) {
+    if (opportunityPhoto.length > 0) {
         photoAvailableBoolean = true;
     }
 
     if (photoAvailableBoolean == true) {
-        displayDataJsx = <RoverPhoto photoData={curiosityPhoto} />
+        displayDataJsx = <RoverPhoto photoData={opportunityPhoto} />
     } else {
-        displayDataJsx = <div>No photos available for this date. Please choose a different date. Curiosity rover has been on Mars from 2012-08-08 till today. Some dates may not have images</div>
+        displayDataJsx = <div>No photos available for this date. Please choose a different date. Opportunity rover has been on Mars from 2004-01-26 till 2018-06-10. Some dates may not have images</div>
     }
 
     return (
         <div>
-            <h1>Curiosity Rover</h1>
+            <h1>Opportunity Rover</h1>
             <label className="rover-date-top-padding">
                 Date
                 <input className="rover-input-date" type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
@@ -49,4 +49,4 @@ function Curiosity() {
     )
 }
 
-export { Curiosity }
+export { Opportunity }
