@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import './RoverPhoto.scss';
 import { RoverTopPhoto } from '../RoverPhoto/RoverTopPhoto';
