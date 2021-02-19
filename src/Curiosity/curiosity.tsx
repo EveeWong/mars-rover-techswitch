@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import '../RoverPhoto/RoverPhoto.scss'
 import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
 import { MobileNavbar } from "../MobileNavbar/MobileNavbar";
+import { Header } from '../Header/Header';
 
 function Curiosity() {
     const [curiosityPhotoData, setCuriosityPhotoData] = useState(null);
@@ -24,6 +25,10 @@ function Curiosity() {
         return (
             <div>
                 <MobileNavbar />
+                <Header 
+      imgSource = {`${process.env.PUBLIC_URL}/images/mission_curiosity.png`}
+      altTag = 'curiosity'
+      />
                 Waiting for data!
             </div>
         )
@@ -43,7 +48,6 @@ function Curiosity() {
 
     return (
         <div>
-            <h1>Curiosity Rover</h1>
             <label className="rover-date-top-padding">
                 Date
                 <input className="rover-input-date" type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
@@ -51,7 +55,11 @@ function Curiosity() {
             </label>
             {displayDataJsx}
             <MobileNavbar />
-        </div>
+            <Header 
+                imgSource = {`${process.env.PUBLIC_URL}/images/mission_curiosity.png`}
+                altTag = 'curiosity'
+            />
+         </div>
     )
 }
 

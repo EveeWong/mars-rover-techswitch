@@ -3,12 +3,17 @@ import '../Fonts.scss';
 import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
 import { Timeline } from 'react-twitter-widgets';
 import './News.scss';
+import { Header } from '../Header/Header';
 
 function News() {
     return (
         <div className="news_container">
             <MobileNavbar />
-            <h1>News</h1>
+            <Header 
+                imgSource = {`${process.env.PUBLIC_URL}/images/Newspad.png`}
+                altTag = 'news'
+            />
+            
             <h2>Nasa live TV</h2>
             <div className="video_container">
                 <iframe className="live_news"

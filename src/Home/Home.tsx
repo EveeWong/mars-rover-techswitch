@@ -4,12 +4,18 @@ import { PicOfTheDay } from './PicOfTheDay/PicOfTheDay';
 import { Weather } from './Weather/Weather';
 import './Home.scss'
 import { Link } from 'react-router-dom';
+import { Header } from '../Header/Header';
+
+
 
 function Home() {
   return (
     <div>
       <MobileNavbar />
-      <h1>MotherBase</h1>
+      <Header 
+      imgSource = {`${process.env.PUBLIC_URL}/images/motherbase.png`}
+      altTag = 'MotherBase'
+      />
       <PicOfTheDay />
       <Weather />
       <p className='clickRover'>Click on the rover to explore Mars!</p>
