@@ -48,17 +48,18 @@ function Curiosity() {
 
     return (
         <div>
+            <MobileNavbar />
             <label className="rover-date-top-padding">
                 Date
                 <input className="rover-input-date" type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
                 <button className="rover-input-date" onClick={() => searchForNewDate()}>Search</button>
             </label>
-            {displayDataJsx}
-            <MobileNavbar />
+            {displayDataJsx}            
             <Header 
                 imgSource = {`${process.env.PUBLIC_URL}/images/mission_curiosity.png`}
                 altTag = 'curiosity'
             />
+            <p className="rover-link">Click <a href="https://mars.nasa.gov/maps/location/?mission=Curiosity" target="blank">here</a> to track the location of curiosity rover on Mars </p>
          </div>
     )
 }
