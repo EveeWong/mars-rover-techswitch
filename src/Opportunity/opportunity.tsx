@@ -38,6 +38,7 @@ function Opportunity() {
     return (
         <div>
             <h1>Opportunity Rover</h1>
+            <div className='toppagebreak'></div>
             <label className="rover-date-top-padding">
                 Date
                 <input className="rover-input-date" type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
@@ -45,6 +46,7 @@ function Opportunity() {
             </label>
             {displayDataJsx}
             <MobileNavbar />
+            <div className='bottompagebreak'></div>
         </div>
     )
 }

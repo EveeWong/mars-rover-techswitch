@@ -19,6 +19,7 @@ function News() {
                 >
                 </iframe>
             </div>
+            <div className='middlepagebreak'></div>
             <Timeline
                 dataSource={{
                     sourceType: 'profile',

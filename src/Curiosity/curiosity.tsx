@@ -44,6 +44,7 @@ function Curiosity() {
     return (
         <div>
             <h1>Curiosity Rover</h1>
+            <div className='toppagebreak'></div>
             <label className="rover-date-top-padding">
                 Date
                 <input className="rover-input-date" type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
@@ -51,6 +52,7 @@ function Curiosity() {
             </label>
             {displayDataJsx}
             <MobileNavbar />
+            <div className='bottompagebreak'></div>
         </div>
     )
 }
