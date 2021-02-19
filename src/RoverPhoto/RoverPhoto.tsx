@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import './RoverPhoto.scss';
 import { RoverTopPhoto } from '../RoverPhoto/RoverTopPhoto';
@@ -17,7 +18,7 @@ function RoverPhoto(props) {
             </div>
             <div className="img-rover-restofimages">
                 <div>
-                    {props.photoData.map(photo => <img className="img-rover-photo-list" src={photo.img_src}
+                    {props.photoData.map((photo, index) => <img key={index} className="img-rover-photo-list" src={photo.img_src}
                         onClick={() => setClickedImage(photo)} />)}
                 </div>
             </div>

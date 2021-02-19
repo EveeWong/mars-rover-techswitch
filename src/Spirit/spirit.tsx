@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import '../RoverPhoto/RoverPhoto.scss'
 import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
+import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
 
 function Spirit() {
     const [spiritPhotoData, setSpiritPhotoData] = useState(null);
@@ -20,7 +21,12 @@ function Spirit() {
     }
 
     if (!spiritPhotoData) {
-        return <div>Waiting for data!</div>
+        return (
+            <div>
+                <MobileNavbar />
+                Waiting for data!
+            </div>
+        )
     }
 
     let spiritPhotos = spiritPhotoData.photos.slice(0, 6);
@@ -45,6 +51,7 @@ function Spirit() {
                 <button className="rover-input-date" onClick={() => searchForNewDate()}>Search</button>
             </label>
             {displayDataJsx}
+            <MobileNavbar />
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import '../RoverPhoto/RoverPhoto.scss'
 import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
+import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
 
 function Opportunity() {
     const [opportunityPhotoData, setOpportunityPhotoData] = useState(null);
@@ -18,11 +19,9 @@ function Opportunity() {
     function searchForNewDate() {
         setSubmitDate(searchDate)
     }
-
     if (!opportunityPhotoData) {
         return <div>Waiting for data!</div>
     }
-
     let opportunityPhotos = opportunityPhotoData.photos.slice(0, 6);
     let photoAvailableBoolean = false;
     let displayDataJsx;
@@ -45,6 +44,7 @@ function Opportunity() {
                 <button className="rover-input-date" onClick={() => searchForNewDate()}>Search</button>
             </label>
             {displayDataJsx}
+            <MobileNavbar />
         </div>
     )
 }
