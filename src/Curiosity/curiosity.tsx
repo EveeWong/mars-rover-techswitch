@@ -49,7 +49,7 @@ function Curiosity() {
     return (
         <div>
 
-            <div className='toppagebreak'></div>
+            <div className='top-page-break'></div>
 
             <label className="rover-date-top-padding">
                 Date
@@ -59,7 +59,7 @@ function Curiosity() {
             {displayDataJsx}
             <MobileNavbar />
 
-            <div className='bottompagebreak'></div>
+            <div className='bottom-page-break'></div>
 
 
             <Header 
