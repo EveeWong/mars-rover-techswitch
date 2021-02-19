@@ -23,15 +23,15 @@ function Curiosity() {
         return <div>Waiting for data!</div>
     }
 
-    let curiosityPhoto = curiosityPhotoData.photos.slice(0, 6);
+    let curiosityPhotos = curiosityPhotoData.photos.slice(0, 6);
     let photoAvailableBoolean = false;
     let displayDataJsx
-    if (curiosityPhoto.length > 0) {
+    if (curiosityPhotos.length > 0) {
         photoAvailableBoolean = true;
     }
 
     if (photoAvailableBoolean == true) {
-        displayDataJsx = <RoverPhoto photoData={curiosityPhoto} />
+        displayDataJsx = <RoverPhoto photoData={curiosityPhotos} />
     } else {
         displayDataJsx = <div>No photos available for this date. Please choose a different date. Curiosity rover has been on Mars from 2012-08-06 till today. Some dates may not have images</div>
     }
