@@ -50,7 +50,7 @@ function MobileNavbar() {
                         <li><Link to="/rovers/spirit" id="rover2">Spirit</Link></li>
                         <li><Link to="#" id="rover3">Opportunity</Link></li>
                     </ul>
-                    <li><Link to="#">News</Link></li>
+                    <li><Link to="/news">News</Link></li>
                 </ul>
             </nav>
         </div>
