@@ -1,29 +1,51 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-import './opportunity.scss';
+import '../RoverPhoto/RoverPhoto.scss'
+import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
+import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
 
 
 function Opportunity() {
     const [opportunityPhotoData, setOpportunityPhotoData] = useState(null);
+    const [searchDate, setSearchDate] = useState("2004-01-26");
+    const [submitDate, setSubmitDate] = useState("2004-01-26");
     useEffect(() => {
-        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
+        fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?&earth_date=${submitDate}&camera=navcam&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
             .then(response => response.json())
-            .then(data => setOpportunityPhotoData(data))
-    }, []);
+            .then(data => {
+                setOpportunityPhotoData(data)
+            })
+    }, [submitDate]);
 
+    function searchForNewDate() {
+        setSubmitDate(searchDate)
+    }
     if (!opportunityPhotoData) {
         return <div>Waiting for data!</div>
     }
+    const opportunityPhotos = opportunityPhotoData.photos.slice(0, 6);
+    let photoAvailableBoolean = false;
+    let displayDataJsx;
+    if (opportunityPhotos.length > 0) {
+        photoAvailableBoolean = true;
+    }
+
+    if (photoAvailableBoolean == true) {
+        displayDataJsx = <RoverPhoto photoData={opportunityPhotos} />
+    } else {
+        displayDataJsx = <div>No photos available for this date. Please choose a different date. Opportunity rover has been on Mars from 2004-01-26 till 2018-06-10. Some dates may not have images</div>
+    }
+
     return (
         <div>
-            
-            <div>Rover : {opportunityPhotoData.photos[0].rover.name} </div>
-            <div>Camera : {opportunityPhotoData.photos[0].camera.full_name} </div>
-            <div>
-                <img className="img-opportunity-main" src={opportunityPhotoData.photos[0].img_src} />
-            </div>
-            <div>Earth date : {opportunityPhotoData.photos[0].earth_date} </div>
-            <div>Sol : {opportunityPhotoData.photos[0].sol} </div>
+            <h1>Opportunity Rover</h1>
+            <label className="rover-date-top-padding">
+                Date
+                <input className="rover-input-date" type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
+                <button className="rover-input-date" onClick={() => searchForNewDate()}>Search</button>
+            </label>
+            {displayDataJsx}
+            <MobileNavbar />
         </div>
     )
 }
