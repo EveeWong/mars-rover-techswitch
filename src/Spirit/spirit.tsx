@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import '../RoverPhoto/RoverPhoto.scss'
 import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
 import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
+import { Header } from '../Header/Header';
 
 function Spirit() {
     const [spiritPhotoData, setSpiritPhotoData] = useState(null);
@@ -44,7 +45,6 @@ function Spirit() {
 
     return (
         <div>
-            <h1>Spirit Rover</h1>
             <div className='toppagebreak'></div>
             <label className="rover-date-top-padding">
                 Date
@@ -54,6 +54,10 @@ function Spirit() {
             {displayDataJsx}
             <MobileNavbar />
             <div className='bottompagebreak'></div>
+            <Header 
+                imgSource = {`${process.env.PUBLIC_URL}/images/mission_spirit.png`}
+                altTag = 'spirit'
+            />
         </div>
     )
 }

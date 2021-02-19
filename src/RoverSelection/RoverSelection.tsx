@@ -4,6 +4,7 @@ import roverData from "./roverData.json";
 import { Link  } from 'react-router-dom';
 import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
 import React, { useState } from "react";
+import { Header } from '../Header/Header';
 
 enum Rovers {
   Curiosity,
@@ -17,7 +18,11 @@ function RoverSelection() {
   return (
     <div className='RoverSelection'>
       <MobileNavbar />
-      <h1> Rovers </h1>
+<Header 
+      imgSource = {`${process.env.PUBLIC_URL}/images/garage.png`}
+      altTag = 'Garage'
+      />
+      <div className='CuriosityRover'>
       <div className='toppagebreak'></div>
       <div className='imageicons'>  
         <img data-testid={"CuriosityButton"} className={selectedRover === Rovers.Curiosity ? 'selected-icon' : 'unselected-icon'} src={roverData.curiosity.imagesrc} alt='Curiosity Icon' width='100px' height='100px' onClick={() => setSelectedRover(Rovers.Curiosity)}/>
@@ -37,6 +42,7 @@ function RoverSelection() {
         <Link to='/rovers/spirit' className='Link'> Explore Spirit Rover! </Link>
       </div>
       <div className='bottompagebreak'></div>
+    </div>
     </div>
   )
 }

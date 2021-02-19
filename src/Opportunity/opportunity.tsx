@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import '../RoverPhoto/RoverPhoto.scss'
 import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
 import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
+import { Header } from '../Header/Header';
+
 
 function Opportunity() {
     const [opportunityPhotoData, setOpportunityPhotoData] = useState(null);
@@ -37,7 +39,6 @@ function Opportunity() {
 
     return (
         <div>
-            <h1>Opportunity Rover</h1>
             <div className='toppagebreak'></div>
             <label className="rover-date-top-padding">
                 Date
@@ -47,6 +48,10 @@ function Opportunity() {
             {displayDataJsx}
             <MobileNavbar />
             <div className='bottompagebreak'></div>
+            <Header 
+                imgSource = {`${process.env.PUBLIC_URL}/images/mission_opportunity.png`}
+                altTag = 'opportunity'
+            />
         </div>
     )
 }
