@@ -9,6 +9,7 @@ function News() {
     return (
         <div className="news_container">
             <MobileNavbar />
+            <div className='top-page-break'></div>
             <Header 
                 imgSource = {`${process.env.PUBLIC_URL}/images/Newspad.png`}
                 altTag = 'news'
@@ -23,12 +24,14 @@ function News() {
                 >
                 </iframe>
             </div>
+            <div className='middle-page-break'></div>
             <Timeline
                 dataSource={{
                     sourceType: 'profile',
                     screenName: 'NASAMars'
                 }}
             />
+            <div className='bottom-page-break'></div>
         </div>
 
     )

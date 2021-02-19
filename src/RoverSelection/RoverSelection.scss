@@ -14,8 +14,10 @@
     background-color:$darkbackgroundcolor;
     border-radius: 25px;
     margin-top: 3px;
+    border: 2px solid $bordercolor;
     padding: 3px;
     padding-bottom: 15px;
+   
 }
 
 @mixin iconstyle{
@@ -78,25 +80,29 @@ table, th, td {
     border: 2px solid $bordercolor;
 }
 
-.bottompagebreak{
+.bottom-page-break{
     padding-bottom: 95px;
 }
 
-.toppagebreak{
+.top-page-break{
     padding-top: 80px;
 }
-a{font-size: large;
-    color:$lighttextcolor;
+
+a{
+    font-size: larger;
+    color: $lighttextcolor;
     text-shadow: 2px 2px 2px #2e2b2ee7;
 }
 
-h2{font-family: 'Bambi Bold', sans-serif;
-text-shadow: 2px 2px 2px #2e2b2ee7;
-color:$lighttextcolor;
-padding-top: 2px;
+h2{
+    font-family: 'Bambi Bold', sans-serif;
+    text-shadow: 2px 2px 2px #2e2b2ee7;
+    color:$lighttextcolor;
+    padding-top: 2px;
 }
 
-h3{font-family: 'Bambi Bold', sans-serif;
+h3{
+    font-family: 'Bambi Bold', sans-serif;
     text-shadow: 2px 2px 2px #2e2b2ee7;
     padding-bottom: 2px;
     color:$lighttextcolor;

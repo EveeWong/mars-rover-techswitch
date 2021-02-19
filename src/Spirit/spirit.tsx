@@ -45,6 +45,7 @@ function Spirit() {
 
     return (
         <div>
+            <div className='top-page-break'></div>
             <label className="rover-date-top-padding">
                 Date
                 <input className="rover-input-date" type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
@@ -52,6 +53,7 @@ function Spirit() {
             </label>
             {displayDataJsx}
             <MobileNavbar />
+            <div className='bottom-page-break'></div>
             <Header 
                 imgSource = {`${process.env.PUBLIC_URL}/images/mission_spirit.png`}
                 altTag = 'spirit'
