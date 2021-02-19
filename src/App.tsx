@@ -16,7 +16,6 @@ import { Header } from './Header/Header';
 function App() {
   return (
     <Router>
-    <Header />
       <Switch>
         <Route exact path="/">
           <Home />

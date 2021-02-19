@@ -1,12 +1,17 @@
 import React from 'react';
-import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
 import './Header.scss'
 
-function Header() {
+interface HeaderName {
+    imgSource: string,
+    altTag: string,
+}
+
+function Header(props: HeaderName) {
     return<div className='headerContainer'>
-            <MobileNavbar />
-            <img className='nasaLogo' src={`${process.env.PUBLIC_URL}/images/NASA_logo.png`} />
+            <img className='pageTitle' src={props.imgSource} alt={props.altTag}/>
+            <img className='nasaLogo' src={`${process.env.PUBLIC_URL}/images/NASA_logo.png`}/>
         </div>
 }
 
 export { Header }
+

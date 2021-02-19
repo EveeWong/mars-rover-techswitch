@@ -27,7 +27,7 @@ function PicOfTheDay() {
     } else if (pictureData.media_type == "image") {
         return (
             <div className='postOTDContainer'>
-                <h2 className='featureTitle'>Nasa$&apos;s feature of the day!</h2>
+                <h2 className='featureTitle'>Nasa&apos;s feature of the day!</h2>
                 <p className='postTitle'>{pictureData.title}</p>
                 <img className='postOTD' src={pictureData.url} width="320" />
                 <p className='explainOTD'>{pictureData.explanation}</p>

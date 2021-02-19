@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import './opportunity.scss';
 
+
 function Opportunity() {
     const [opportunityPhotoData, setOpportunityPhotoData] = useState(null);
     useEffect(() => {
@@ -15,6 +16,7 @@ function Opportunity() {
     }
     return (
         <div>
+            
             <div>Rover : {opportunityPhotoData.photos[0].rover.name} </div>
             <div>Camera : {opportunityPhotoData.photos[0].camera.full_name} </div>
             <div>

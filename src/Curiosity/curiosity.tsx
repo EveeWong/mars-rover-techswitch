@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import '../RoverPhoto/RoverPhoto.scss'
 import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
 import { MobileNavbar } from "../MobileNavbar/MobileNavbar";
+import { Header } from '../Header/Header';
 
 function Curiosity() {
     const [curiosityPhotoData, setCuriosityPhotoData] = useState(null);
@@ -19,6 +20,10 @@ function Curiosity() {
         return (
             <div>
                 <MobileNavbar />
+                <Header 
+      imgSource = {`${process.env.PUBLIC_URL}/images/mission_curiosity.png`}
+      altTag = 'curiosity'
+      />
                 Waiting for data!
             </div>
         )
@@ -28,6 +33,10 @@ function Curiosity() {
         <div>
             <RoverPhoto photoData={curiosityPhoto} />
             <MobileNavbar />
+            <Header 
+      imgSource = {`${process.env.PUBLIC_URL}/images/mission_curiosity.png`}
+      altTag = 'curiosity'
+      />
          </div>
     )
 }

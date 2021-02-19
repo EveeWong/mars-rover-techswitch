@@ -3,13 +3,17 @@ import { RoverSummary } from "./RoverSummary/RoverSummary";
 import roverData from "./roverData.json";
 import { Link } from 'react-router-dom';
 import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
+import { Header } from '../Header/Header';
 
 function RoverSelection() {
 
   return (
     <div>
       <MobileNavbar />
-      <h1> Rover selection page </h1>
+      <Header 
+      imgSource = {`${process.env.PUBLIC_URL}/images/garage.png`}
+      altTag = 'Garage'
+      />
       <div className='CuriosityRover'>
         <RoverSummary rover={roverData.curiosity} />
         <Link to='/rovers/curiosity'> Explore Curiosity Rover! </Link>
