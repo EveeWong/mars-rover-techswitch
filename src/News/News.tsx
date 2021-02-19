@@ -21,7 +21,8 @@ function News() {
             <Timeline
                 dataSource={{
                     sourceType: 'profile',
-                    screenName: 'NASAMars'
+                    screenName: 'NASAMars',
+                    // theme: isDarkMode ? 'dark' : 'light'
                 }}
             />
         </div>

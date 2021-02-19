@@ -1,9 +1,10 @@
 @import 'Colours';
 
-body{
+body {
     background-color: $lightbackgroundcolor;
 }
-h1{
+
+h1 {
     position: fixed;
     left: 50%;
     top: 0;
@@ -11,5 +12,4 @@ h1{
     transform: translateX(-50%);
     color: $lighttextcolor;
     z-index: 1000;
-
 }
