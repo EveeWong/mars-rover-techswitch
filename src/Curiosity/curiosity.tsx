@@ -38,7 +38,7 @@ function Curiosity() {
     if (photoAvailableBoolean == true) {
         displayDataJsx = <RoverPhoto photoData={curiosityPhotos} />
     } else {
-        displayDataJsx = <div>No photos available for this date. Please choose a different date. Curiosity rover has been on Mars from 2012-08-06 till today. Some dates may not have images</div>
+        displayDataJsx = <div>No photos available for this date. Please choose a different date. Curiosity rover has been on Mars from 2012-08-08 till today. Some dates may not have images</div>
     }
 
     return (
