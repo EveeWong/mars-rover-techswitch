@@ -22,7 +22,7 @@ function Opportunity() {
     if (!opportunityPhotoData) {
         return <div>Waiting for data!</div>
     }
-    let opportunityPhotos = opportunityPhotoData.photos.slice(0, 6);
+    const opportunityPhotos = opportunityPhotoData.photos.slice(0, 6);
     let photoAvailableBoolean = false;
     let displayDataJsx;
     if (opportunityPhotos.length > 0) {

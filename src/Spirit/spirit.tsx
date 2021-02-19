@@ -29,7 +29,7 @@ function Spirit() {
         )
     }
 
-    let spiritPhotos = spiritPhotoData.photos.slice(0, 6);
+    const spiritPhotos = spiritPhotoData.photos.slice(0, 6);
     let photoAvailableBoolean = false;
     let displayDataJsx;
     if (spiritPhotos.length > 0) {

@@ -28,7 +28,7 @@ function Curiosity() {
             </div>
         )
     }
-    let curiosityPhotos = curiosityPhotoData.photos.slice(0, 6);
+    const curiosityPhotos = curiosityPhotoData.photos.slice(0, 6);
     let photoAvailableBoolean = false;
     let displayDataJsx
     if (curiosityPhotos.length > 0) {
