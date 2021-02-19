@@ -1,3 +1,4 @@
+@import './Colours.scss';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 .opensans {
@@ -11,7 +12,8 @@
 }
 
 h1{
-  font-family: 'Bambi';
+  font-family: 'Bambi Bold', sans-serif;
+  
 }
 h2{
   font-family: 'Open Sans';
@@ -27,4 +29,11 @@ p{
   font-family: "Segoe UI";
   font-style: normal;
   font-weight: 200;
+}
+a{ 
+  font-family: 'Bambi';
+  color: $highlightcolor;
+  size: medium;
+  font-weight: 600;
+  padding: 5px;
 }
