@@ -15,17 +15,8 @@ const sol = '3032';
 
 
 describe("RoverTopPhoto", () => {
-  it('Should print Navigation Camera', async () => {
+  it('Should print Navigation Camera, earthDate = 2021-02-15, Sol = 3032', async () => {
       const component = render(<RoverTopPhoto img_src={imgSrc} full_name={fullName} earth_date={earthDate} sol={sol}/>);
-      await waitFor(() => component.getByText('Camera : Navigation Camera'))
+      await waitFor(() => component.getByText('Camera : Navigation Camera Earth date : 2021-02-15 Sol : 3032')) 
   });
-  it('Should print earthDate = 2021-02-15', async () => {
-    const component = render(<RoverTopPhoto img_src={imgSrc} full_name={fullName} earth_date={earthDate} sol={sol}/>);
-    await waitFor(() => component.getByText('Earth date : 2021-02-15'))
-  });
-  it('Should print Sol = 3032', async () => {
-    const component = render(<RoverTopPhoto img_src={imgSrc} full_name={fullName} earth_date={earthDate} sol={sol}/>);
-    await waitFor(() => component.getByText('Sol : 3032'))
-  });
-
 })
