@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import '../RoverPhoto/RoverPhoto.scss'
 import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
 import { MobileNavbar } from '../MobileNavbar/MobileNavbar';
+import { Header } from '../Header/Header';
 
 
 function Opportunity() {
@@ -38,7 +39,6 @@ function Opportunity() {
 
     return (
         <div>
-            <h1>Opportunity Rover</h1>
             <label className="rover-date-top-padding">
                 Date
                 <input className="rover-input-date" type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
@@ -46,6 +46,10 @@ function Opportunity() {
             </label>
             {displayDataJsx}
             <MobileNavbar />
+            <Header 
+                imgSource = {`${process.env.PUBLIC_URL}/images/mission_opportunity.png`}
+                altTag = 'opportunity'
+            />
         </div>
     )
 }
