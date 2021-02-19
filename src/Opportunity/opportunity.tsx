@@ -39,14 +39,14 @@ function Opportunity() {
 
     return (
         <div>
+            <MobileNavbar />
             <div className='top-page-break'></div>
             <label className="rover-date-top-padding">
                 Date
                 <input className="rover-input-date" type="date" name="searchDate" onChange={e => setSearchDate(e.target.value)} />
                 <button className="rover-input-date" onClick={() => searchForNewDate()}>Search</button>
             </label>
-            {displayDataJsx}
-            <MobileNavbar />
+            {displayDataJsx}            
             <div className='bottom-page-break'></div>
             <Header 
                 imgSource = {`${process.env.PUBLIC_URL}/images/mission_opportunity.png`}
