@@ -4,6 +4,10 @@ body {
     background-color: $lightbackgroundcolor;
 }
 
+body.dark-mode {
+    background-color: $lightbackgroundcolor-darkmode;
+}
+
 h1 {
     position: fixed;
     left: 50%;
@@ -13,3 +17,5 @@ h1 {
     color: $lighttextcolor;
     z-index: 1000;
 }
+
+

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,8 +13,14 @@ import { Spirit } from './Spirit/spirit';
 import { News } from './News/News';
 import { Footer } from './Footer/Footer';
 import './App.scss';
+import reducer from './reducer';
 
 function App() {
+ 
+  const [state, dispatch] = useReducer(reducer, {
+		isDark: false
+	});
+
   return (
     <Router>
       <Switch>
