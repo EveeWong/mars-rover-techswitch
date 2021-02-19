@@ -5,12 +5,14 @@ import {
   Route
 } from 'react-router-dom';
 import { Home } from './Home/Home';
-import { Curiosity } from './Curiosity/curiosity';
 import { RoverSelection } from './RoverSelection/RoverSelection';
 import './App.scss';
+import { Curiosity} from './Curiosity/curiosity';
 import { Opportunity } from './Opportunity/opportunity';
 import { Spirit } from './Spirit/spirit';
-import {Footer} from './Footer/Footer';
+import { News } from './News/News';
+import { Footer } from './Footer/Footer';
+import './App.scss';
 
 function App() {
   return (
@@ -31,10 +33,12 @@ function App() {
         <Route exact path="/rovers">
           <RoverSelection />
         </Route>
+        <Route exact path="/news">
+          <News />
+        </Route>
       </Switch>
       <Footer />
     </Router>
   );
 }
-
 export default App;
