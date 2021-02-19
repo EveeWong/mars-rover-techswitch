@@ -1,5 +1,7 @@
 import React from 'react';
 import './RoverTopPhoto.scss';
+import '../Fonts.scss';
+import '../Colours.scss';
 
 interface RoverPhoto {
     img_src: string;
@@ -13,9 +15,11 @@ function RoverTopPhoto(props: RoverPhoto) {
         <div >
             <div className="top-rover-div">
                 <img className="img-rover-top" src={props.img_src} />
-                <div>Camera : {props.full_name} </div>
-                <div>Earth date : {props.earth_date} </div>
-                <div>Sol : {props.sol} </div>
+                <p>
+                    Camera : {props.full_name} <br/>
+                    Earth date : {props.earth_date} <br/>
+                    Sol : {props.sol} <br/>
+                </p>
             </div>
         </div>
     )
