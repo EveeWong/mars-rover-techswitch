@@ -23,15 +23,15 @@ function Spirit() {
         return <div>Waiting for data!</div>
     }
 
-    let spiritPhoto = spiritPhotoData.photos.slice(0, 6);
+    let spiritPhotos = spiritPhotoData.photos.slice(0, 6);
     let photoAvailableBoolean = false;
     let displayDataJsx;
-    if (spiritPhoto.length > 0) {
+    if (spiritPhotos.length > 0) {
         photoAvailableBoolean = true;
     }
 
     if (photoAvailableBoolean == true) {
-        displayDataJsx = <RoverPhoto photoData={spiritPhoto} />
+        displayDataJsx = <RoverPhoto photoData={spiritPhotos} />
     } else {
         displayDataJsx = <div>No photos available for this date. Please choose a different date. Spirit rover has been on Mars from 2004-01-05 till 2010-03-22. Some dates may not have images</div>
     }

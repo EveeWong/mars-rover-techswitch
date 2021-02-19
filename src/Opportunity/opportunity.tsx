@@ -23,15 +23,15 @@ function Opportunity() {
         return <div>Waiting for data!</div>
     }
 
-    let opportunityPhoto = opportunityPhotoData.photos.slice(0, 6);
+    let opportunityPhotos = opportunityPhotoData.photos.slice(0, 6);
     let photoAvailableBoolean = false;
     let displayDataJsx;
-    if (opportunityPhoto.length > 0) {
+    if (opportunityPhotos.length > 0) {
         photoAvailableBoolean = true;
     }
 
     if (photoAvailableBoolean == true) {
-        displayDataJsx = <RoverPhoto photoData={opportunityPhoto} />
+        displayDataJsx = <RoverPhoto photoData={opportunityPhotos} />
     } else {
         displayDataJsx = <div>No photos available for this date. Please choose a different date. Opportunity rover has been on Mars from 2004-01-26 till 2018-06-10. Some dates may not have images</div>
     }
