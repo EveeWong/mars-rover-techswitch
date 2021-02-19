@@ -9,6 +9,7 @@ function News() {
         <div className="news_container">
             <MobileNavbar />
             <h1>News</h1>
+            <div className='toppagebreak'></div>
             <h2>Nasa live TV</h2>
             <div className="video_container">
                 <iframe className="live_news"
@@ -24,6 +25,7 @@ function News() {
                     screenName: 'NASAMars'
                 }}
             />
+            <div className='bottompagebreak'></div>
         </div>
 
     )
