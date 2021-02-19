@@ -1,0 +1,103 @@
+@import "../Colours.scss";
+@import "../Fonts.scss";
+
+
+.RoverSelection{
+    background-color: $lightbackgroundcolor;
+    text-align: center;
+}
+
+@mixin roverstyle { 
+    width: 90%;
+    margin:auto;
+    text-align: center;
+    background-color:$darkbackgroundcolor;
+    border-radius: 25px;
+    margin-top: 3px;
+    padding: 3px;
+    padding-bottom: 15px;
+}
+
+@mixin iconstyle{
+    
+    border: 4px black;
+    background-color:$selectedbordercolor;
+    border-style:double;
+    border-radius: 50%; 
+}
+.imageicons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 18px;
+}
+
+.selected-icon {
+    @include iconstyle;
+    background-color: $lighttextcolor;
+    
+}
+.unselected-icon{
+    @include iconstyle;
+}
+
+.selected-pic {
+    @include roverstyle;
+}
+
+.un-selectedpic {
+    display: none;
+}
+
+.roverImage{
+    border: 4px black;
+    background-color:$lighttextcolor;
+    border-style:double;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+}
+
+.roverTable{
+    background-color: $darkbackgroundcolor;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    color: white;
+    font-size: small;
+}
+
+tr:nth-child(even){
+    background-color: $highlightcolor;
+}
+table, th, td {
+    border-collapse:collapse;
+    border: 2px solid $bordercolor;
+}
+
+.bottompagebreak{
+    padding-bottom: 95px;
+}
+
+.toppagebreak{
+    padding-top: 80px;
+}
+a{font-size: large;
+    color:$lighttextcolor;
+    text-shadow: 2px 2px 2px #2e2b2ee7;
+}
+
+h2{font-family: 'Bambi Bold', sans-serif;
+text-shadow: 2px 2px 2px #2e2b2ee7;
+color:$lighttextcolor;
+padding-top: 2px;
+}
+
+h3{font-family: 'Bambi Bold', sans-serif;
+    text-shadow: 2px 2px 2px #2e2b2ee7;
+    padding-bottom: 2px;
+    color:$lighttextcolor;
+}

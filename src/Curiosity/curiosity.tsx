@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import '../RoverPhoto/RoverPhoto.scss'
 import { RoverPhoto } from '../RoverPhoto/RoverPhoto';
+import { MobileNavbar } from "../MobileNavbar/MobileNavbar";
 
 function Curiosity() {
     const [curiosityPhotoData, setCuriosityPhotoData] = useState(null);
@@ -20,9 +21,13 @@ function Curiosity() {
     }
 
     if (!curiosityPhotoData) {
-        return <div>Waiting for data!</div>
+        return (
+            <div>
+                <MobileNavbar />
+                Waiting for data!
+            </div>
+        )
     }
-
     let curiosityPhotos = curiosityPhotoData.photos.slice(0, 6);
     let photoAvailableBoolean = false;
     let displayDataJsx
@@ -45,6 +50,7 @@ function Curiosity() {
                 <button className="rover-input-date" onClick={() => searchForNewDate()}>Search</button>
             </label>
             {displayDataJsx}
+            <MobileNavbar />
         </div>
     )
 }

@@ -1,0 +1,15 @@
+@import 'Colours';
+
+body{
+    background-color: $lightbackgroundcolor;
+}
+h1{
+    position: fixed;
+    left: 50%;
+    top: 0;
+    margin-top: 0;
+    transform: translateX(-50%);
+    color: $lighttextcolor;
+    z-index: 1000;
+
+}

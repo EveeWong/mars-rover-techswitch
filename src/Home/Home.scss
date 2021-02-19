@@ -1,0 +1,67 @@
+@import '../Colours';
+
+.postOTDContainer{
+    font-family: "Segoe UI";
+    color: $lighttextcolor;
+    position: relative;
+    width: 90%;
+    left: 5%;
+    padding-left: 0;
+    background-color: $darkbackgroundcolor;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    padding-bottom: 3px;
+    border-radius: 25px;
+}
+.weatherTable{
+    position: relative;
+    width: 90%;
+    left: 5%;
+    background: none;
+    margin-bottom: 20%;
+    border-radius: 25px;
+    
+    
+}
+.postOTD{
+    width: 100%;
+    
+}
+.postTitle{
+    position: absolute;
+    left: 2%;
+    margin-top: 0%;
+    color: $lighttextcolor;
+    text-shadow: 2px 2px 2px #2e2b2ee7;
+    
+
+}
+.explainOTD{
+    margin-left: 2%;
+}
+.featureTitle{
+    margin-left: 7.5%;
+    text-shadow: 2px 2px 2px #2e2b2ee7;
+}
+.roverButton{
+    z-index:1001;
+    position: fixed;
+    right: 2.5%;
+    bottom: 2px;
+    width: 13%;
+}
+.clickRover{
+    position: fixed;
+    bottom: 2px;
+    margin-bottom: 1.5%;
+    right: 17%;
+    font-family: "Segoe UI";
+    color: $lighttextcolor;
+    z-index: 1002;
+}
+
+@media only screen and (max-width: 600px){
+    .weatherTable{
+        height: 500px
+    }
+}
