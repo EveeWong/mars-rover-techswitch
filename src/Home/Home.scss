@@ -1,13 +1,13 @@
-
+@import '../Colours';
 
 .postOTDContainer{
     font-family: "Segoe UI";
-    color: #DCDCDC;
+    color: $lighttextcolor;
     position: relative;
     width: 90%;
     left: 5%;
     padding-left: 0;
-    background-color: #8E6A5A;
+    background-color: $darkbackgroundcolor;
     margin-top: 20%;
     margin-bottom: 5%;
     padding-bottom: 3px;
@@ -31,7 +31,7 @@
     position: absolute;
     left: 2%;
     margin-top: 0%;
-    color: #DCDCDC;
+    color: $lighttextcolor;
     text-shadow: 2px 2px 2px #2e2b2ee7;
     
 
@@ -56,7 +56,7 @@
     margin-bottom: 1.5%;
     right: 17%;
     font-family: "Segoe UI";
-    color: #DCDCDC;
+    color: $lighttextcolor;
     z-index: 1002;
 }
 
