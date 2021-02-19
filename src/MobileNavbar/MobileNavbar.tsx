@@ -47,8 +47,8 @@ function MobileNavbar() {
                     <li><Link to="/rovers">Rovers</Link></li>
                     <ul className="rover_list">
                         <li><Link to="/rovers/curiosity" id="rover1">Curiosity</Link></li>
-                        <li><Link to="/rovers/spirit" id="rover2">Spirit</Link></li>
-                        <li><Link to="/rovers/opportunity" id="rover3">Opportunity</Link></li>
+                        <li><Link to="/rovers/opportunity" id="rover2">Opportunity</Link></li>
+                        <li><Link to="/rovers/spirit" id="rover3">Spirit</Link></li>                        
                     </ul>
                     <li><Link to="/news">News</Link></li>
                 </ul>
